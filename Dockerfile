@@ -18,8 +18,8 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         libtool m4 make matplotlib metis mvapich=4.1 netcdf4 \
         numpy "openblas>=0.3.23" pkg-config python=3.11 scipy zlib \
         "j34ni::esme_hdf5_mvapich_4_1" \
-        "j34ni::mumps-mpi" \
-        "j34ni::mumps-include" \
+        "j34ni::mumps-mpi=5.7.3" \
+        "j34ni::mumps-include=5.7.3" \
         "j34ni::parmetis" \
         "j34ni::scalapack" && \
     conda clean -afy
@@ -49,7 +49,7 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         --COPTFLAGS="-O3" \
         --CXXOPTFLAGS="-O3" \
         --FOPTFLAGS="-O3" \
-        --download-fblaslapack \
+        --with-blas-lapack-dir=/opt/conda \
         --with-metis-dir=/opt/conda \
         --with-parmetis-dir=/opt/conda \
         --with-scalapack-dir=/opt/conda \
