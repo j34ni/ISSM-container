@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this container, please cite it as below."
+type: software
+title: "ISSM 2026.2 Container Environment"
+version: "1.0.0"
+doi: "10.5281/zenodo.20325488"
+date-released: "2026-05-21"
+authors:
+  - family-names: Iaquinta
+    given-names: Jean
+repository-code: "https://github.com/j34ni/ISSM-container"
+url: "https://github.com/j34ni/ISSM-container"
+license: "MIT"        
+keywords:
+  - singularity
+  - docker
+  - apptainer
+  - issm
+  - ice-sheet
+  - stressbalance
+  - xarray
+  - netcdf
+  - cartopy
+  - reproducible-research
