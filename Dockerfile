@@ -17,11 +17,11 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         gcc_linux-64=13 gxx_linux-64=13 gfortran_linux-64=13 \
         libtool m4 make matplotlib metis mvapich=4.1 netcdf4 \
         numpy "openblas>=0.3.23" pkg-config python=3.11 scipy zlib \
-        "j34ni::esme_hdf5_mvapich_4_1" \
+        "j34ni::esme_hdf5_mvapich_4_1=1.14.6" \
         "j34ni::mumps-mpi=5.7.3" \
         "j34ni::mumps-include=5.7.3" \
-        "j34ni::parmetis" \
-        "j34ni::scalapack" && \
+        "j34ni::parmetis=4.0.3" \
+        "j34ni::scalapack=2.2.0" && \
     conda clean -afy
 
 ENV PETSC_VERSION=3.22.2
