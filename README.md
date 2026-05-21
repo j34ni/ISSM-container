@@ -35,6 +35,11 @@ mkdir -p ./execution_scratch
 **Step 1 — Pull the image:**
 
 ```bash
+docker pull ghcr.io/j34ni/issm:latest
+```
+or using the long SHA digest
+
+```bash
 docker pull ghcr.io/j34ni/issm:ce11b70960e94647ab4d9efcf35a0e1cf922f541
 ```
 
