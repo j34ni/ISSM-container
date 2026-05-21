@@ -76,6 +76,7 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
 
 RUN source /opt/conda/etc/profile.d/conda.sh && \
     conda activate base && \
+    export LDFLAGS="-L/opt/conda/lib -L/opt/petsc/lib -Wl,-rpath,/opt/conda/lib -Wl,-rpath,/opt/petsc/lib" && \
     export LD_LIBRARY_PATH="/opt/conda/lib:${LD_LIBRARY_PATH}" && \
     export FI_PROVIDER=tcp && \
     export NUMPY_INC=$(python3 -c "import numpy; print(numpy.get_include())") && \
