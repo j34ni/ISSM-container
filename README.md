@@ -1,6 +1,11 @@
-# ISSM-2026.2 Container Environment (with MVAPICH-4.1, PETSc-3.22.2 & MUMPS-5.7.3)
+# ISSM-2026.2 Container Environment 
+# (with MVAPICH-4.1, PETSc-3.22.2 & MUMPS-5.7.3)
 
-This repository contains the Docker recipe to compile and execute the **Ice-sheet and Sea-level System Model (ISSM)** version **2026.2**, coupled with **PETSc-3.22.2** and powered by a Conda environment handling the compilation toolchain (GCC-13) and MPI runtime via **MVAPICH-4.1** supporting both UCX (for Mellanox type Infiniband) and OFI/CXI (for Cray/HPE's Slingshot Host Systems).
+This repository contains:
+
+* the Docker recipe to compile the **Ice-sheet and Sea-level System Model (ISSM)** version **2026.2**, coupled with **PETSc-3.22.2** and **MUMPS-5.7.3**. It is powered by a Conda environment handling the compilation toolchain (GCC-13) and MPI runtime via **MVAPICH-4.1** supporting both UCX (for Mellanox type Infiniband) and OFI/CXI (for Cray/HPE's Slingshot Host Systems);
+  
+* instructions to run a Greenland example using Docker (on a personal computer or Virtual Machine) and Singularity/Apptainer (on a HPC like Olivia).
 
 ![Figure_1](Figure_1.png)
 
@@ -777,10 +782,3 @@ write lock file:
 
 
 ---
-
-## Notes
-
-- The model binary (`Greenland.bin`) must be generated before submitting the solver job. It is written to the working directory of `runme.py`, not to `execution_scratch`.
-- `FI_PROVIDER=cxi` and `MPICH_CH4_NETMOD=ofi` are required for Slingshot 11 (HPE Cray EX) interconnect on Olivia.
-- `--mpi=pmi2` is the correct PMI mode for MVAPICH on Olivia with Slurm.
-- The Greenland benchmark is a small model; solver time (~8 seconds) does not scale significantly with more than a few MPI ranks due to the problem size relative to MPI overhead.
