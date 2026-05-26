@@ -484,8 +484,7 @@ cd $WORKDIR
 srun -n $SLURM_NTASKS --mpi=pmi2 \
     apptainer exec ${BASE_DIR}/${IMAGE} \
     /opt/start.sh /opt/issm/bin/issm.exe StressbalanceSolution \
-    /opt/uio/examples/Greenland Greenland \
-    -malloc_off
+    /opt/uio/examples/Greenland Greenland
 ```
 
 Submit:
