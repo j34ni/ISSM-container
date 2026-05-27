@@ -20,7 +20,6 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         "j34ni::esme_hdf5_mvapich_4_1=1.14.6" \
         "j34ni::mumps-mpi=5.7.3" \
         "j34ni::mumps-include=5.7.3" \
-        "j34ni::parmetis=4.0.3" \
         "j34ni::scalapack=2.2.0" && \
     conda clean -afy
 
@@ -51,7 +50,6 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         --FOPTFLAGS="-O3" \
         --with-blas-lapack-dir=/opt/conda \
         --with-metis-dir=/opt/conda \
-        --with-parmetis-dir=/opt/conda \
         --with-scalapack-dir=/opt/conda \
         --with-mumps-dir=/opt/conda \
         --with-hdf5-dir=/opt/conda \
@@ -98,7 +96,6 @@ RUN source /opt/conda/etc/profile.d/conda.sh && \
         --with-petsc-dir=/opt/petsc \
         --with-blas-lapack-dir=/opt/petsc \
         --with-metis-dir=/opt/conda \
-        --with-parmetis-dir=/opt/conda \
         --with-mumps-dir=/opt/conda \
         --with-hdf5-dir=/opt/conda \
         --with-triangle-dir=${ISSM_DIR}/externalpackages/triangle/install && \

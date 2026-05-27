@@ -11,6 +11,9 @@ This repository contains:
 
 ![Figure_1](Figure_1.png)
 
+**Note on ParMETIS:** ParMETIS is not included in this container due to its non-commercial redistribution licence. Users who wish to enable ParMETIS for improved parallel ordering performance on large models may rebuild the container locally by adding `--download-parmetis` to the PETSc configure step in the Dockerfile (in which case ParMETIS is downloaded directly from its source and is not redistributed by this project).
+
+
 ---
 
 ## Reproducing the Greenland Stressbalance benchmark
