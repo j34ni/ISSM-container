@@ -43,7 +43,7 @@ docker pull ghcr.io/j34ni/issm:latest
 or using the long SHA digest
 
 ```bash
-docker pull ghcr.io/j34ni/issm:ce11b70960e94647ab4d9efcf35a0e1cf922f541
+docker pull ghcr.io/j34ni/issm:94a3f34d489393c6c4521c6ec5ff7541cfd221e1
 ```
 
 Or build it locally from this repository:
@@ -408,7 +408,7 @@ wget --no-check-certificate \
   https://issm.jpl.nasa.gov/files/examples/Greenland_5km_dev1.2.nc
 
 apptainer pull ${BASE_DIR}/issm.sif \
-  docker://ghcr.io/j34ni/issm:ce11b70960e94647ab4d9efcf35a0e1cf922f541
+  docker://ghcr.io/j34ni/issm:94a3f34d489393c6c4521c6ec5ff7541cfd221e1
 ```
 
 **Step 2 — Clone ISSM:**
